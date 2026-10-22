@@ -1,0 +1,60 @@
+erDiagram
+    USERS ||--o{ BOOKINGS : "жасайды"
+    ROOMS ||--o{ BOOKINGS : "брондалады"
+    DORMITORIES ||--|{ ROOMS : "қамтиды"
+    ROOMS ||--o{ ROOM_AMENITIES : "ие"
+    AMENITIES ||--o{ ROOM_AMENITIES : "кіреді"
+
+    USERS {
+        int id PK
+        varchar full_name
+        varchar email UK
+        varchar phone
+        varchar password_hash
+        enum gender "male, female"
+        enum role "student, admin"
+        datetime created_at
+    }
+
+    DORMITORIES {
+        int id PK
+        varchar name
+        varchar address
+        enum gender_type "male, female, mixed"
+        text description
+        datetime created_at
+    }
+
+    ROOMS {
+        int id PK
+        int dormitory_id FK
+        varchar room_number
+        tinyint floor
+        tinyint capacity
+        enum room_type "single, double, triple, quad"
+        decimal price_per_month
+        enum status "available, maintenance"
+        text description
+    }
+
+    AMENITIES {
+        int id PK
+        varchar name UK
+    }
+
+    ROOM_AMENITIES {
+        int room_id PK,FK
+        int amenity_id PK,FK
+    }
+
+    BOOKINGS {
+        int id PK
+        int user_id FK
+        int room_id FK
+        date start_date
+        date end_date
+        enum status "pending, approved, rejected, cancelled"
+        text comment
+        datetime created_at
+        datetime updated_at
+    }
