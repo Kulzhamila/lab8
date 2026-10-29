@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кіру — Жатақхана бөлмелерін брондау</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">Ж</span>
+            <span class="logo-text">Жатақхана <small>Брондау</small></span>
+        </a>
+        <button class="burger" aria-label="Мәзірді ашу" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="nav">
+            <a href="index.html">Басты бет</a>
+            <a href="rooms.html">Бөлмелер</a>
+            <a href="login.html">Кіру</a>
+            <a href="register.html" class="btn btn-sm">Тіркелу</a>
+        </nav>
+    </div>
+</header>
+
+<main class="auth">
+    <aside class="auth-side">
+        <h2>Қайта оралғаныңызға қуаныштымыз!</h2>
+        <p>Жеке кабинетке кіріп, өтінімдеріңіздің күйін бақылаңыз.</p>
+        <ul>
+            <li>Өтінім статусын нақты уақытта көру</li>
+            <li>Брондауды өзгерту немесе болдырмау</li>
+            <li>Профиль деректерін жаңарту</li>
+        </ul>
+    </aside>
+
+    <section class="auth-main">
+        <div class="auth-card">
+            <h1>Кіру</h1>
+            <p class="sub">Email мен құпиясөзіңізді енгізіңіз</p>
+
+            <div class="alert alert-success" id="formSuccess"></div>
+
+            <form id="loginForm" data-mode="login" novalidate>
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="input" placeholder="aru@mail.kz" autocomplete="email">
+                    <p class="error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="password">Құпиясөз</label>
+                    <div class="pass-wrap">
+                        <input type="password" id="password" name="password" class="input" placeholder="••••••••" autocomplete="current-password">
+                        <button type="button" class="toggle-pass">Көрсету</button>
+                    </div>
+                    <p class="error"></p>
+                </div>
+
+                <div class="form-extra">
+                    <label class="checkbox"><input type="checkbox" name="remember"> Мені есте сақта</label>
+                    <a href="#">Құпиясөзді ұмыттыңыз ба?</a>
+                </div>
+
+                <button type="submit" class="btn btn-block">Кіру</button>
+            </form>
+
+            <p class="auth-foot">Аккаунтыңыз жоқ па? <a href="register.html">Тіркелу</a></p>
+        </div>
+    </section>
+</main>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тіркелу — Жатақхана бөлмелерін брондау</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">Ж</span>
+            <span class="logo-text">Жатақхана <small>Брондау</small></span>
+        </a>
+        <button class="burger" aria-label="Мәзірді ашу" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="nav">
+            <a href="index.html">Басты бет</a>
+            <a href="rooms.html">Бөлмелер</a>
+            <a href="login.html">Кіру</a>
+            <a href="register.html" class="btn btn-sm">Тіркелу</a>
+        </nav>
+    </div>
+</header>
+
+<main class="auth">
+    <aside class="auth-side">
+        <h2>Жатақханадағы орныңызды бүгін брондаңыз</h2>
+        <p>Тіркелгеннен кейін бос бөлмелерге онлайн өтінім бере аласыз.</p>
+        <ul>
+            <li>Тегін және жылдам тіркелу</li>
+            <li>Барлық жатақханалар бір жерде</li>
+            <li>Өтінім 24 сағат ішінде қаралады</li>
+        </ul>
+    </aside>
+
+    <section class="auth-main">
+        <div class="auth-card">
+            <h1>Тіркелу</h1>
+            <p class="sub">Жаңа аккаунт ашу үшін форманы толтырыңыз</p>
+
+            <div class="alert alert-success" id="formSuccess"></div>
+
+            <form id="registerForm" data-mode="register" novalidate>
+                <div class="field">
+                    <label for="full_name">Аты-жөні</label>
+                    <input type="text" id="full_name" name="full_name" class="input" placeholder="Аружан Серікова" autocomplete="name">
+                    <p class="error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="input" placeholder="aru@mail.kz" autocomplete="email">
+                    <p class="error"></p>
+                </div>
+
+                <div class="row-2">
+                    <div class="field">
+                        <label for="phone">Телефон <span class="hint">(міндетті емес)</span></label>
+                        <input type="tel" id="phone" name="phone" class="input" placeholder="+77011234567" autocomplete="tel">
+                        <p class="error"></p>
+                    </div>
+                    <div class="field">
+                        <label for="gender">Жынысы</label>
+                        <select id="gender" name="gender" class="input">
+                            <option value="">Таңдаңыз</option>
+                            <option value="female">Әйел</option>
+                            <option value="male">Ер</option>
+                        </select>
+                        <p class="error"></p>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="password">Құпиясөз</label>
+                    <div class="pass-wrap">
+                        <input type="password" id="password" name="password" class="input" placeholder="Кемінде 8 таңба" autocomplete="new-password">
+                        <button type="button" class="toggle-pass">Көрсету</button>
+                    </div>
+                    <div class="strength">
+                        <div class="strength-bar"><span id="strengthBar"></span></div>
+                        <p class="strength-text" id="strengthText">Әріп пен сан қолданыңыз</p>
+                    </div>
+                    <p class="error"></p>
+                </div>
+
+                <div class="field">
+                    <label for="password_confirm">Құпиясөзді қайталаңыз</label>
+                    <input type="password" id="password_confirm" name="password_confirm" class="input" placeholder="••••••••" autocomplete="new-password">
+                    <p class="error"></p>
+                </div>
+
+                <div class="field">
+                    <label class="checkbox">
+                        <input type="checkbox" name="terms">
+                        <span>Жатақхананың ішкі тәртіп ережелерімен таныстым және келісемін</span>
+                    </label>
+                    <p class="error"></p>
+                </div>
+
+                <button type="submit" class="btn btn-block">Тіркелу</button>
+            </form>
+
+            <p class="auth-foot">Аккаунтыңыз бар ма? <a href="login.html">Кіру</a></p>
+        </div>
+    </section>
+</main>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/validation.js"></script>
+</body>
+</html>

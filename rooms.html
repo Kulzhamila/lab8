@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бөлмелер каталогы — Жатақхана бөлмелерін брондау</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">Ж</span>
+            <span class="logo-text">Жатақхана <small>Брондау</small></span>
+        </a>
+        <button class="burger" aria-label="Мәзірді ашу" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="nav">
+            <a href="index.html">Басты бет</a>
+            <a href="rooms.html">Бөлмелер</a>
+            <a href="login.html">Кіру</a>
+            <a href="register.html" class="btn btn-sm">Тіркелу</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="page-head">
+        <div class="container">
+            <p class="breadcrumbs"><a href="index.html">Басты бет</a> / Бөлмелер</p>
+            <h1>Бөлмелер каталогы</h1>
+            <p>Өзіңізге ыңғайлы бөлмені сүзгілер арқылы табыңыз</p>
+        </div>
+    </section>
+
+    <div class="container catalog">
+        <div>
+            <button class="btn btn-outline btn-sm filters-toggle" id="filtersToggle" type="button">☰ Сүзгілер</button>
+
+            <!-- Сүзгілер панелі -->
+            <form class="filters" id="filters">
+                <h2>Сүзгілер</h2>
+
+                <div class="field">
+                    <label for="q">Іздеу</label>
+                    <input type="search" id="q" name="q" class="input" placeholder="Бөлме нөмірі, мысалы 101">
+                </div>
+
+                <div class="field">
+                    <label for="dorm">Жатақхана</label>
+                    <select id="dorm" name="dorm" class="input">
+                        <option value="">Барлығы</option>
+                        <option value="1">№1 жатақхана (қыздар)</option>
+                        <option value="2">№2 жатақхана (ұлдар)</option>
+                        <option value="3">№3 жатақхана (аралас)</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="type">Бөлме түрі</label>
+                    <select id="type" name="type" class="input">
+                        <option value="">Кез келген</option>
+                        <option value="single">Бір орындық</option>
+                        <option value="double">Екі орындық</option>
+                        <option value="triple">Үш орындық</option>
+                        <option value="quad">Төрт орындық</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="maxPrice">Ең жоғары баға <span class="range-value" id="priceValue"></span></label>
+                    <input type="range" id="maxPrice" name="maxPrice" min="9000" max="25000" step="500" value="25000">
+                </div>
+
+                <p class="filter-group-title">Ыңғайлылықтар</p>
+                <div class="amenity-list">
+                    <label class="checkbox"><input type="checkbox" name="amenity" value="Wi-Fi"> Wi-Fi</label>
+                    <label class="checkbox"><input type="checkbox" name="amenity" value="Жеке душ"> Жеке душ</label>
+                    <label class="checkbox"><input type="checkbox" name="amenity" value="Тоңазытқыш"> Тоңазытқыш</label>
+                    <label class="checkbox"><input type="checkbox" name="amenity" value="Балкон"> Балкон</label>
+                    <label class="checkbox"><input type="checkbox" name="amenity" value="Кондиционер"> Кондиционер</label>
+                </div>
+
+                <div class="field">
+                    <label class="checkbox"><input type="checkbox" id="onlyFree" name="onlyFree"> Тек бос орны барлар</label>
+                </div>
+
+                <button type="reset" class="btn btn-outline btn-block btn-sm">Сүзгілерді тазалау</button>
+            </form>
+        </div>
+
+        <section>
+            <div class="toolbar">
+                <p class="count"><strong id="count">0</strong> бөлме табылды</p>
+                <select id="sort" class="input" aria-label="Сұрыптау">
+                    <option value="number">Нөмірі бойынша</option>
+                    <option value="price-asc">Алдымен арзан</option>
+                    <option value="price-desc">Алдымен қымбат</option>
+                    <option value="free">Бос орын көп</option>
+                </select>
+            </div>
+
+            <div class="rooms-grid" id="roomsGrid"></div>
+
+            <div class="empty" id="empty">
+                <h3>Бөлме табылмады</h3>
+                <p>Сүзгі шарттарын өзгертіп көріңіз</p>
+                <button class="btn btn-sm" id="emptyReset" type="button">Сүзгілерді тазалау</button>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Жатақхана бөлмелерін брондау жүйесі</p>
+        <p>Алматы · info@dorm.kz</p>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/rooms.js"></script>
+</body>
+</html>

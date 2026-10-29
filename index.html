@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Басты бет — Жатақхана бөлмелерін брондау</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">Ж</span>
+            <span class="logo-text">Жатақхана <small>Брондау</small></span>
+        </a>
+        <button class="burger" aria-label="Мәзірді ашу" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="nav">
+            <a href="index.html">Басты бет</a>
+            <a href="rooms.html">Бөлмелер</a>
+            <a href="login.html">Кіру</a>
+            <a href="register.html" class="btn btn-sm">Тіркелу</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero блогы -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div>
+                <span class="hero-label">2026–2027 оқу жылына брондау ашық</span>
+                <h1>Жатақханадан орынды <span>онлайн</span> брондаңыз</h1>
+                <p>Бос бөлмелерді қарап, өзіңізге ыңғайлысын таңдап, өтінімді бірнеше минутта жіберіңіз. Кезекте тұрудың, қағаз толтырудың қажеті жоқ.</p>
+                <div class="hero-actions">
+                    <a href="rooms.html" class="btn btn-accent">Бөлмелерді көру</a>
+                    <a href="register.html" class="btn btn-outline">Тіркелу</a>
+                </div>
+            </div>
+
+            <!-- Жылдам іздеу формасы: rooms.html бетіне параметрлермен өтеді -->
+            <form class="search-card" action="rooms.html" method="get">
+                <h2>Бөлме іздеу</h2>
+                <div class="field">
+                    <label for="dorm">Жатақхана</label>
+                    <select id="dorm" name="dorm" class="input">
+                        <option value="">Барлығы</option>
+                        <option value="1">№1 жатақхана (қыздар)</option>
+                        <option value="2">№2 жатақхана (ұлдар)</option>
+                        <option value="3">№3 жатақхана (аралас)</option>
+                    </select>
+                </div>
+                <div class="field">
+                    <label for="type">Бөлме түрі</label>
+                    <select id="type" name="type" class="input">
+                        <option value="">Кез келген</option>
+                        <option value="single">Бір орындық</option>
+                        <option value="double">Екі орындық</option>
+                        <option value="triple">Үш орындық</option>
+                        <option value="quad">Төрт орындық</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-block">Іздеу</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <div class="container">
+        <div class="stats">
+            <div class="stat"><strong>3</strong><span>жатақхана</span></div>
+            <div class="stat"><strong>9</strong><span>бөлме</span></div>
+            <div class="stat"><strong>9</strong><span>бос орын</span></div>
+            <div class="stat"><strong>24 сағ</strong><span>өтінімді қарау</span></div>
+        </div>
+    </div>
+
+    <!-- Жатақханалар -->
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <h2>Біздің жатақханалар</h2>
+                <p>Әр жатақханада оқу залы, Wi-Fi және 24 сағаттық күзет бар</p>
+            </div>
+            <div class="grid-3">
+                <article class="dorm-card">
+                    <div class="dorm-img c1">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V5l7-3 7 3v16M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/></svg>
+                    </div>
+                    <div class="dorm-body">
+                        <h3>№1 жатақхана</h3>
+                        <p class="address">Алматы, Сәтпаев к-сі, 22</p>
+                        <div class="dorm-meta">
+                            <span class="tag female">Қыздар</span>
+                            <a href="rooms.html?dorm=1">Бөлмелер →</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="dorm-card">
+                    <div class="dorm-img c2">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V5l7-3 7 3v16M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/></svg>
+                    </div>
+                    <div class="dorm-body">
+                        <h3>№2 жатақхана</h3>
+                        <p class="address">Алматы, Әл-Фараби даңғ., 71</p>
+                        <div class="dorm-meta">
+                            <span class="tag male">Ұлдар</span>
+                            <a href="rooms.html?dorm=2">Бөлмелер →</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="dorm-card">
+                    <div class="dorm-img c3">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V5l7-3 7 3v16M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"/></svg>
+                    </div>
+                    <div class="dorm-body">
+                        <h3>№3 жатақхана</h3>
+                        <p class="address">Алматы, Тимирязев к-сі, 15</p>
+                        <div class="dorm-meta">
+                            <span class="tag">Аралас</span>
+                            <a href="rooms.html?dorm=3">Бөлмелер →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Қалай жұмыс істейді -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="section-head">
+                <h2>Қалай брондаймын?</h2>
+                <p>Үш қарапайым қадам</p>
+            </div>
+            <div class="grid-3 steps">
+                <div class="step">
+                    <h3>Тіркеліңіз</h3>
+                    <p>Аты-жөніңізді, email және құпиясөзді енгізіп, жеке кабинет ашыңыз.</p>
+                </div>
+                <div class="step">
+                    <h3>Бөлме таңдаңыз</h3>
+                    <p>Жатақхана, бөлме түрі және бағасы бойынша сүзіп, ұнаған бөлмені табыңыз.</p>
+                </div>
+                <div class="step">
+                    <h3>Өтінім жіберіңіз</h3>
+                    <p>Мерзімді көрсетіп, өтінім жіберіңіз. Әкімші растағаннан кейін хабарлама келеді.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="cta">
+                <div>
+                    <h2>Орын таусылмай тұрғанда үлгеріңіз</h2>
+                    <p>Тіркелу тегін және бір минуттан аз уақыт алады.</p>
+                </div>
+                <a href="register.html" class="btn">Қазір тіркелу</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Жатақхана бөлмелерін брондау жүйесі</p>
+        <p>Алматы · info@dorm.kz</p>
+    </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
